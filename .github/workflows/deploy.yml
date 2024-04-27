@@ -1,0 +1,4 @@
+name : Push code to EC2 imaage
+on:
+  push:
+    branches: main 
