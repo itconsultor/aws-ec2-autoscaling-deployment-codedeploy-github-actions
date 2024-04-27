@@ -12,4 +12,7 @@ jobs:
         run : ls -al 
       - name: "Configure AWS Credentials" 
         uses: aws-actions/configure-aws-credentials@v4.0.2
+        with:
+          aws-region: us-east-2
+            
             
