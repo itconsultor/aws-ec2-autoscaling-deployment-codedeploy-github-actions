@@ -2,3 +2,8 @@ name : Push code to EC2 imaage
 on:
   push:
     branches: main 
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
