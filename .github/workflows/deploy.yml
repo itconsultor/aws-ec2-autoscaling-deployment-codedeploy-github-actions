@@ -17,11 +17,12 @@ jobs:
           aws-region: us-east-1
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
-      - id: deploy
+      - name : Create Code Deploy
+        id: deploy
         uses: webfactory/create-aws-codedeploy-deployment@v0.2.2
         with:
               application: TestApplication
-      - name : Create Code Deploy
+      - name : Print Commit Message
         uses: peter-evans/commit-comment@v2
         with:
               application: TestApplication
