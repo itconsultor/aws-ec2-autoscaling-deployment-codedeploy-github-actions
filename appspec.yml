@@ -1,3 +1,5 @@
+version: 0.0
+os: linux
 files:
   - source: webapp-sample/index.html
     destination: /var/www/html/index.html
