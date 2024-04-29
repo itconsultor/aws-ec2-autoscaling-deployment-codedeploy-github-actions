@@ -7,7 +7,7 @@ files:
 file_exists_behavior: OVERWRITE
 branch_config:
     wip\/.*: ~ 
-    master:
+    main:
         deploymentGroupName: TestDeploymentGroup
         deploymentGroupConfig:
             serviceRoleArn: arn:aws:iam::276313926502:role/CodeDeployTestApplication
