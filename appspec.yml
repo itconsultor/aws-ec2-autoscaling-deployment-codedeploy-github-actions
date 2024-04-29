@@ -5,3 +5,12 @@ files:
     destination: /var/www/html/
     overwrite: true
 file_exists_behavior: OVERWRITE
+branch_config:
+    wip\/.*: ~ 
+    master:
+        deploymentGroupName: TestDeploymentGroup
+        deploymentGroupConfig:
+            serviceRoleArn: arn:aws:iam::276313926502:role/CodeDeployTestApplication
+        deploymentConfig:
+            autoRollbackConfiguration:
+                enabled: true
