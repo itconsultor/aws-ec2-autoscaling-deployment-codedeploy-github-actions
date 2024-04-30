@@ -21,11 +21,11 @@ jobs:
         id: deploy
         uses: webfactory/create-aws-codedeploy-deployment@v0.2.2
         with:
-              application: TestApplication
+              application: YoutubeDemoApplication
       - name : Print Commit Message
         uses: peter-evans/commit-comment@v2
         with:
-              application: TestApplication
+              application: YoutubeDemoApplication
               token: ${{ secrets.CODEDEPLOY_TOKEN }}
               body: |
                     @${{ github.actor }} this was deployed as [${{ steps.deploy.outputs.deploymentId }}](https://console.aws.amazon.com/codesuite/codedeploy/deployments/${{ steps.deploy.outputs.deploymentId }}?region=us-east-1) to group `${{ steps.deploy.outputs.deploymentGroupName }}`.
