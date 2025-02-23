@@ -2,6 +2,11 @@ name : Push code to EC2 imaage
 on:
   push:
     branches: main 
+
+permissions:
+      id-token: write
+      contents: read 
+
 jobs:
   build-push-deploy:
     runs-on: ubuntu-latest
