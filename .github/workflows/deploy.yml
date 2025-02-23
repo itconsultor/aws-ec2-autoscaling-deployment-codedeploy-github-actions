@@ -5,7 +5,7 @@ on:
 
 permissions:
       id-token: write
-      contents: read 
+      contents: write 
 
 jobs:
   build-push-deploy:
@@ -22,6 +22,7 @@ jobs:
           aws-region: us-east-1
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
+          aws-session-token : ${{ secrets.AWS_SESSION_TOKEN }}
       - name : Create Code Deploy
         id: deploy
         uses: webfactory/create-aws-codedeploy-deployment@v0.2.2
